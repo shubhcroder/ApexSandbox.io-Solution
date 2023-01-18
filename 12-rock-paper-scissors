@@ -1,0 +1,8 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    //code here
+
+    return  player1 == player2 ? 0 :
+            (player1 == 'rock' && player2 == 'scissors')||
+            (player1 == 'paper' && player2 == 'rock')||
+            (player1 == 'scissors' && player2 == 'paper') ? 1 : 2;
+}
