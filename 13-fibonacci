@@ -1,0 +1,24 @@
+public Integer fibonacci(Integer n) {
+    //code here
+    // Integer currentVal = 0;
+    // List <Integer> sequence = new List <Integer> {1,1};
+    
+    // for(Integer i = 1; i <= n; i++)
+    // {
+    //    currentVal = sequence.get(i) + sequence.get(i-1);
+    //    sequence.add(currentVal);
+    // }
+
+    // return sequence.get(n - 1);
+    Integer fib = 1, fibPrevious = 1, temp = 1;
+    for (Integer i=3; i<=n; i++) {
+        temp = fibPrevious;
+        fibPrevious = fib;
+        fib = fib + temp;
+    }
+    return fib;
+//     public Integer fibonacci(Integer n) {
+//     if (n < 3) return 1;
+//     return fibonacci(n - 1) + fibonacci(n - 2);
+//     }
+}
