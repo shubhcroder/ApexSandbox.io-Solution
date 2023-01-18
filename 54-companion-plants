@@ -1,0 +1,28 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    //code here
+    map<String,String> companionMap = new map<String,String>{
+        'cucumbers' => 'lettuce',
+        'onions' => 'lettuce',
+        'carrots' => 'onions',
+        'tomatoes' => 'onions'
+    };
+    if ((companionMap.get(plant1) == plant2) ||
+        (companionMap.get(plant2) == plant1)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// Boolean comp = false;
+    // list<list<string>> l = new list<list<string>>();
+    // l.add(new list<string>{'lettuce','cucumbers'});
+    // l.add(new list<string>{'lettuce','onions'});
+    // l.add(new list<string>{'onions','carrots'});
+    // l.add(new list<string>{'onions','tomatoes'});
+    // for(list<string> ls : l){
+    //     if(ls.contains(plant1) && ls.contains(plant2)){
+    //         comp = true;
+    //         break;
+    //     }
+    // }
+    // return comp;
