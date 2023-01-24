@@ -8,5 +8,5 @@ public List<Integer> fibonacciSeries(Integer n) {
         fib = fib + temp;
         fList.add(fib);
     }
-    return fList;
+    return n==1 ? fList.remove(1) : fList;
 }
