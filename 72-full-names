@@ -1,6 +1,6 @@
 public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     //code here
-    list<String> result = ew list<String>();
+    list<String> result = new list<String>();
     if(firstNames!=null && lastNames!=null){
         for(Integer i=0;i<firstNames.size();i++){
             result.add(firstNames[i]+' '+lastNames[i]);
