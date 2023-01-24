@@ -3,7 +3,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     list<String> result = ew list<String>();
     if(firstNames!=null && lastNames!=null){
         for(Integer i=0;i<firstNames.size();i++){
-            fullnames__c.add(firstNames[i]+' '+lastNames[i]);
+            result.add(firstNames[i]+' '+lastNames[i]);
         }
     }
     return result;
