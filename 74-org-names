@@ -6,5 +6,10 @@ public List<String> orgNames(List<String> adjectives, List<String> animals) {
             orgs.add(adjectives[i]+'-'+animals[j]);
         }
     }
+    // for (String s1 : adjectives) {
+    //     for (String s2 : animals) {
+    //         combos.add(s1 + '-' + s2);
+    //     }
+    // }
     return orgs;
 }
