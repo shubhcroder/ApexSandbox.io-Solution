@@ -2,7 +2,7 @@ public List<Integer> fibonacciSeries(Integer n) {
     //code here
     list<Integer> fList = new list<Integer>{1};
     Integer fib = 1, fibPrevious = 1, temp = 1;
-    if(n==2)
+    if(n>=2)
         fList.add(1);
     for (Integer i=3; i<=n; i++) {
         temp = fibPrevious;
