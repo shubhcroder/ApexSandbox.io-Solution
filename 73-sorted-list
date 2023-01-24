@@ -1,0 +1,18 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+    boolean sorted = false;
+    list<Integer> newlist = new list<Integer>();
+    newlist = numbers;
+    numbers.sort();
+    if(newlist==numbers)
+        sorted = true;
+    else{
+        list<Integer> l = new list<Integer>();
+        for(Integer i=numbers.size();i>0;i--){
+            l.add(numbers[i]);
+        }
+        if(newlist==l)
+           sorted = true;
+    }
+    return sorted;
+}
