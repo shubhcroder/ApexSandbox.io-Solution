@@ -8,8 +8,8 @@ public boolean isSorted(List<Integer> numbers) {
         sorted = true;
     else{
         list<Integer> l = new list<Integer>();
-        for(Integer i=numbers.size()-1;i>=0;i--){
-            l.add(numbers[i]);
+        for(Integer i=newlist.size()-1;i>=0;i--){
+            l.add(newlist[i]);
         }
         if(newlist==l)
            sorted = true;
