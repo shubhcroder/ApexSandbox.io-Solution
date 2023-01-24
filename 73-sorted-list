@@ -1,18 +1,21 @@
 public boolean isSorted(List<Integer> numbers) {
     //code here
-    boolean sorted = false;
-    list<Integer> newlist = new list<Integer>();
-    newlist = numbers;
-    numbers.sort();
-    if(newlist==numbers)
-        sorted = true;
-    else{
-        list<Integer> l = new list<Integer>();
-        for(Integer i=newlist.size()-1;i>=0;i--){
-            l.add(newlist[i]);
-        }
-        if(newlist==l)
-           sorted = true;
+    if(numbers?.size() == null) return true;
+    if(numbers.size() < 3) return true;
+
+    //Assumption that the list is sorted. Our job is to prove it is false
+    Boolean descend = true;
+    Boolean ascend = true;
+    for(Integer i = 0; i < numbers.size() - 1; i++){
+        //If the same we can move on to next loop
+        if(numbers[i] == numbers[i+1]) continue;
+
+        if(numbers[i] < numbers[i+1]) descend = false;
+        if(numbers[i] > numbers[i+1]) ascend = false;
+
+        //If both have tested false why continue the loop. break out and return the answer
+        if(!ascend && !descend) break;
     }
-    return sorted;
+
+    return (ascend || descend);
 }
