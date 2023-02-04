@@ -1,7 +1,13 @@
 public Integer secondLargest(List<Integer> numbers) {
     //code here
-    set<Integer> s  = new set<Integer>();
+    map<Integer,Integer> m = new map<Integer,Integer>();
     numbers.sort();
-    s.addAll(numbers);
-    return s.get(s.size()-2);
+    for(Integer i:numbers){
+        if(!m.containsKey(i)){
+            m.put(i,i);
+        }
+    }
+    numbers.clear();
+    numbers = m.values();
+    return numbers.get(numbers.size()-2);
 }
