@@ -4,9 +4,11 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     set<String> s = new set<String>();
     for(Case c:cases)
     {
+        List<Case> cl = new List<Case>();
         if(s.contains(c.Type))
         {
-           mp.put(c.Type, mp.get(c.Type).add(c));
+           cl = mp.get(c.Type);
+           mp.put(c.Type, cl.add(c));
         }
         else
         {
