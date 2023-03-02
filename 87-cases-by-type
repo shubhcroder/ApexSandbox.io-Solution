@@ -7,8 +7,8 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
         List<Case> cl = new List<Case>();
         if(s.contains(c.Type))
         {
-           cl = mp.get(c.Type);
-           mp.put(c.Type, cl.add(c));
+           cl.add(mp.get(c.Type));
+           mp.put(c.Type, cl);
         }
         else
         {
