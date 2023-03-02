@@ -1,0 +1,18 @@
+public Map<String, List<Case>> casesByType(List<Case> cases) {
+    //code here
+    Map<String,List<Case>> mp = new Map<String,List<Case>>();
+    set<String> s = new set<String>();
+    for(Case c:cases)
+    {
+        if(s.contains(c.Type))
+        {
+           mp.put(c.Type, mp.get(c.Type).add(c));
+        }
+        else
+        {
+            mp.put(c.Type,c);
+            s.add(c.Type);
+        } 
+    }
+    return mp;
+}
